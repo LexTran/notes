@@ -37,6 +37,7 @@ CSR-Net：多目标舟状骨骨折分割的跨尺度残差网络
 
 ![CSR-Net工作流](../插图/CSR-Net工作流.png)
 <center><font color=silver>图1 CSR-Net工作流</font></center>
+
 ![CSR-Net结构](../插图/CSR-Net结构.png)
 <center><font color=silver>图2 CSR-Net结构</font></center>
 # 实验结果
