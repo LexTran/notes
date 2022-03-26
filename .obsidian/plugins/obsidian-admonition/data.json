@@ -1,0 +1,48 @@
+{
+  "userAdmonitions": {
+    "comment": {
+      "type": "comment",
+      "color": "255, 92, 92",
+      "icon": {
+        "name": "bookmark",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    },
+    "solution": {
+      "type": "solution",
+      "color": "124, 232, 254",
+      "icon": {
+        "name": "book-open",
+        "type": "font-awesome"
+      },
+      "command": false,
+      "injectColor": true,
+      "noTitle": false
+    }
+  },
+  "syntaxHighlight": false,
+  "copyButton": false,
+  "version": "7.0.4",
+  "autoCollapse": false,
+  "defaultCollapseType": "open",
+  "syncLinks": true,
+  "injectColor": true,
+  "parseTitles": true,
+  "allowMSSyntax": true,
+  "msSyntaxIndented": true,
+  "livePreviewMS": true,
+  "dropShadow": true,
+  "hideEmpty": false,
+  "open": {
+    "admonitions": true,
+    "icons": true,
+    "other": true,
+    "advanced": false
+  },
+  "icons": [],
+  "useFontAwesome": true,
+  "rpgDownloadedOnce": false
+}

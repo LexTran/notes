@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "2c854a36258118ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "f40c264200f74ee6",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "通信基础.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "09258b437d7d78e9",
+    "type": "split",
+    "children": [
+      {
+        "id": "358599fcf307f02b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7f458edebcc4dbd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "aedc2439daefe706",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 357
+  },
+  "right": {
+    "id": "3bac96a5128f7cc9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d42678bde7b56d32",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cc158946acd6cfb6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "通信基础.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "68c1580e4a15f000",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "通信基础.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 402,
+    "collapsed": true
+  },
+  "active": "f40c264200f74ee6",
+  "lastOpenFiles": [
+    "通信基础.md",
+    "随机过程.md",
+    "深度学习.md",
+    "Excalidraw/Drawing 2022-03-20 11.46.25.excalidraw.md",
+    "notes/Excalidraw/Drawing 2022-03-20 11.45.56.excalidraw.md",
+    "通信基础 2022-03-20 11.45.17.excalidraw.md",
+    "通信基础 2022-03-20 11.44.05.excalidraw.md",
+    "ICS笔记.md"
+  ]
+}
