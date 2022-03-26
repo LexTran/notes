@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "通信基础.md",
+            "file": "stm32实例.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "通信基础.md",
+                "file": "stm32实例.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "通信基础.md"
+                "file": "stm32实例.md"
               }
             }
           }
@@ -100,13 +100,15 @@
   },
   "active": "f40c264200f74ee6",
   "lastOpenFiles": [
-    "通信基础.md",
-    "随机过程.md",
-    "深度学习.md",
-    "Excalidraw/Drawing 2022-03-20 11.46.25.excalidraw.md",
-    "notes/Excalidraw/Drawing 2022-03-20 11.45.56.excalidraw.md",
-    "通信基础 2022-03-20 11.45.17.excalidraw.md",
-    "通信基础 2022-03-20 11.44.05.excalidraw.md",
-    "ICS笔记.md"
+    "stm32实例.md",
+    "插图/通信协议/UART传输数据格式.png",
+    "插图/通信协议/SPI信号线.png",
+    "插图/通信协议/SPI使用.png",
+    "插图/通信协议/I2C数据传输.png",
+    "插图/通信协议/7位地址和10位地址格式.png",
+    "插图/FPGA/FPGA开发流程.png",
+    "机器人编程基础.md",
+    "机器学习白板推导.md",
+    "计算机底层.md"
   ]
 }
