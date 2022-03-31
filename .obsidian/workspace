@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "医学图像识别、分割和解析.md",
+            "file": "MIP.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "医学图像识别、分割和解析.md",
+                "file": "MIP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "医学图像识别、分割和解析.md"
+                "file": "MIP.md"
               }
             }
           }
@@ -100,15 +100,15 @@
   },
   "active": "d4052d8efdc8c523",
   "lastOpenFiles": [
+    "MIP.md",
     "医学图像识别、分割和解析.md",
+    "诗歌摘录.md",
     "文献/手术机器人文献/微创手术机器人立体视觉系统设计方法与引导机理研究.md",
     "射频仿真模拟目标位置精度及误差修正_ob.md",
     "stm32实例.md",
     "插图/通信协议/UART传输数据格式.png",
     "插图/通信协议/SPI信号线.png",
     "插图/通信协议/SPI使用.png",
-    "插图/通信协议/I2C数据传输.png",
-    "插图/通信协议/7位地址和10位地址格式.png",
-    "插图/FPGA/FPGA开发流程.png"
+    "插图/通信协议/I2C数据传输.png"
   ]
 }
