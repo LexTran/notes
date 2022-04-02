@@ -7,12 +7,8 @@
         "id": "d4052d8efdc8c523",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "MIP.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MIP.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,30 +80,35 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "MIP.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "ba648fcccddd11b9",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 402,
-    "collapsed": true
+    "width": 402
   },
   "active": "d4052d8efdc8c523",
   "lastOpenFiles": [
+    "控制.md",
+    "课表.md",
+    "运筹学.md",
+    "矩阵.md",
+    "医学图像配准综述.md",
     "MIP.md",
+    "综述.md",
     "医学图像识别、分割和解析.md",
-    "诗歌摘录.md",
-    "文献/手术机器人文献/微创手术机器人立体视觉系统设计方法与引导机理研究.md",
-    "射频仿真模拟目标位置精度及误差修正_ob.md",
-    "stm32实例.md",
-    "插图/通信协议/UART传输数据格式.png",
-    "插图/通信协议/SPI信号线.png",
-    "插图/通信协议/SPI使用.png",
-    "插图/通信协议/I2C数据传输.png"
+    "通信基础.md",
+    "Templates/hyperlink.md"
   ]
 }
