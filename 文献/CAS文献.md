@@ -1,4 +1,5 @@
 # MIP
-- [[./分割/CSR-Net]]
-- [[./2D-3D配准/综述]]
+- [[CSR-Net]]
+- [[Deep Learning in Medical Image Registration_A Review]]
+- [[一种2D-3D影像配准算法]]
 # 手术机器人

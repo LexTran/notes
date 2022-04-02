@@ -35,10 +35,10 @@ CSR-Net：多目标舟状骨骨折分割的跨尺度残差网络
 输出层和通道的结构设计将CSR-Net建立为一个多目标体系结构，可以同步实现舟状骨骨折和手骨的分割
 为了实现跨尺度的特征融合，CSR-Net在层级之间使用残差连接，提升了网络的特征提取能力
 
-![CSR-Net工作流](../插图/CSR-Net工作流.png)
+![[CSR-Net工作流.png]]
 <center><font color=silver>图1 CSR-Net工作流</font></center>
 
-![CSR-Net结构](../插图/CSR-Net结构.png)
+![[CSR-Net结构.png]]
 <center><font color=silver>图2 CSR-Net结构</font></center>
 # 实验结果
 
