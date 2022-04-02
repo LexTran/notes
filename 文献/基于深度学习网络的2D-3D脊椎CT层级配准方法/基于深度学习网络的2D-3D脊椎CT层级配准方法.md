@@ -9,7 +9,7 @@
 
 # 方法设计
 
-![[./img/配准流程.png]]
+![[配准流程.png]]
 <center><font color=silver>图1 配准流程图</font></center>
 ![[X射线成像计算模型.png]]
 <center><font color=silver>图2 X射线成像计算模型</font></center>

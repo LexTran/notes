@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "医学图像配准综述.md",
+            "file": "ysyx.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "医学图像配准综述.md",
+                "file": "ysyx.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "医学图像配准综述.md"
+                "file": "ysyx.md"
               }
             }
           },
@@ -99,24 +99,23 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 402,
-    "collapsed": true
+    "width": 412
   },
   "active": "a994f33585237b5e",
   "lastOpenFiles": [
+    "ysyx.md",
+    "stm32实例.md",
+    "MIP.md",
+    "综述.md",
+    "游戏引擎.md",
+    "运筹学.md",
+    "英语写作.md",
+    "医学图像识别、分割和解析.md",
     "医学图像配准综述.md",
-    "Templates/ref.md",
-    "文献/基于深度学习网络的2D-3D脊椎CT层级配准方法/基于深度学习网络的2D-3D脊椎CT层级配准方法.md",
-    "文献/一种2D-3D影像配准算法/一种2D-3D影像配准算法.md",
-    "文献/CAS文献.md",
-    "文献/Deep Learning in Medical Image Registration_A Survey/Deep Learning in Medical Image Registration_A Survey.md",
-    "文献/Deep Learning in Medical Image Registration_A Review/Deep Learning in Medical Image Registration_A Review.md",
-    "文献/CSR-Net：多目标舟状骨骨折分割的跨尺度残差网络/CSR-Net.md",
-    "文献/CSR-Net：多目标舟状骨骨折分割的跨尺度残差网络/img/CSR-Net工作流.png",
-    "文献/CSR-Net：多目标舟状骨骨折分割的跨尺度残差网络/img/CSR-Net结构.png"
+    "通信基础.md"
   ]
 }
