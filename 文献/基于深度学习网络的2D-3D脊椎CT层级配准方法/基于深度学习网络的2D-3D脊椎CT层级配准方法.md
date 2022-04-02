@@ -5,15 +5,84 @@
 
 # 研究背景
 
+2D/3D图像配准技术是影像导航手术中的关键技术，将来自不同成像设备、成像时间以及成像目标的多幅图像经过一定的空间变换后变换至统一参考系下达到统一解剖结构的图像像素对应匹配的目的，实现精确跟踪与校正手术器械与病人病灶间的相对位置关系完成影像导航手术，关键在于准确的建立术前待配准3D图像和术中真实2D X射线影像之间的空间位置关系，换句话说就是将术中2D图像作为参考图像，来配准术前3D图像
 
+现如今的配准大致分为：基于灰度的方法、基于特征的方法和基于深度学习的方法
+
+---
+基于特征的配准：只需要少量特征信息，对图像灰度信息依赖小，已知特征信息的情况下配准相对简单，但是特征信息的提取通常需要人工干预，难以实现自动化；且基于特征配准忽略了图像中诸如灰度、梯度这样的宝贵信息，导致配准精度低、鲁棒性差
+
+---
+基于灰度的配准：使用远多于特征信息点的像素灰度信息完成配准，误差小、精度高，鲁棒性也较高，但是处理的信息过多，配准时间长无法实现实时配准
+
+---
+基于深度学习配准：使用深度回归网络预测2D/3D配准变换参数，预处理较复杂，网络结构冗长，网络训练需要大量数据，而且深度学习方法往往是端到端方法直接预测变换参数，中间过程是“黑匣子”，不利于保证匹配精度
+
+---
+本文方法：先通过深度学习网络进行粗配准，在通过参数优化实现精配准，将端到端配准修改为层级配准，保证配准速度的同时提高了配准精度
 
 # 方法设计
 
-![[配准流程.png]]
-<center><font color=silver>图1 配准流程图</font></center>
-![[X射线成像计算模型.png]]
-<center><font color=silver>图2 X射线成像计算模型</font></center>
-![[深度卷积神经网络结构.png]]
-<center><font color=silver>图3 深度学习CNN结构</font></center>
+1. 获取X射线图像作为训练以及配准过程的术中2D参考图，获取医学CT序列作为训练过程的术前3D图像
+2. 构建训练图像集
+	- 将术前3D图像输入刚体变换模型，通过随机变换刚体变换参数$T=(t_x,t_y,t_z,r_x,r_y,r_z)$生成一组三维图像序列，然后输入至X射线成像计算模型进行投影生成DRR图像序列，X射线成像计算模型如下图所示：
+	![[X射线成像计算模型.png]]
+	<center><font color=silver>图1 X射线成像计算模型</font></center>
+	刚体变换可以表示为平移矩阵和绕三个轴的旋转矩阵的乘法：
+	$$\begin{equation}
+	\begin{aligned}
+	\begin{aligned}
+	\begin{pmatrix}
+	1\quad 0\quad 0\quad &x_{trans}\\
+	0\quad 1\quad 0\quad &y_{trans}\\
+	0\quad 0\quad 1\quad &z_{trans}\\
+	0\quad 0\quad 0\quad &1
+	\end{pmatrix}_{T}
+	&\times
+	\begin{pmatrix*}[c]
+	1\qquad 0\qquad 0\qquad 0\\
+	0\quad \cos\Phi\quad \sin\Phi\quad 0\\
+	0\quad {-\sin\Phi}\quad \cos\Phi\quad 0\\
+	0\qquad 0\qquad 0\qquad 1
+	\end{pmatrix*}_{P}\\
+	\times
+	\begin{pmatrix*}[c]
+	\cos\Theta\quad 0\quad \sin\Theta\quad 0\\
+	0\qquad 1\qquad 0\qquad 0\\
+	-\sin\Theta\quad 0\quad \cos\Theta\quad 0\\
+	0\qquad 0\qquad 0\qquad 1
+	\end{pmatrix*}_{R}
+	&\times
+	\begin{pmatrix*}[c]
+	\cos\Omega\quad \sin\Omega\quad 0\quad 0\\
+	-\sin\Omega\quad \cos\Omega\quad 0\quad 0\\
+	0\qquad 0\qquad 1\qquad 0\\
+	0\qquad 0\qquad 0\qquad 1
+	\end{pmatrix*}_{Y}
+	\end{aligned}
+	\end{aligned}
+	\end{equation}$$
+	X射线呈现计算模型可以采用基于GPU的Ray-Casting算法：
+	$$\begin{equation}
+	\begin{aligned}
+	I=I_0\times e^{-\sum_{i}u_id_i}
+	\end{aligned}
+	\end{equation}$$
+	其中，$I$表示X射线经过衰减后的能量，$I_0$表示X射线初试能量，$u_i$表示第$i$个体素组织的线性衰减系数，$d_i$表示射线在第$i$个体素组织中经过的距离
+	- 对DRR图像序列进行两两组合，一张作为参考图，一张作为浮动图像，两张图像构成一个训练样本
+3. 构建如下图所示的神经网络进行训练：
+ ![[深度卷积神经网络结构.png]]
 
-# 总结
+<center><font color=silver>图2 深度学习CNN结构</font></center>
+	训练过程中将浮动图像减去参考图像得到残差图像，通过网络不断提取残差图的高阶特征信息找到从浮动图像到参考图像的变形规律输出6个变形参数
+4. 利用训练好的深度学习网络进行粗配准，再利用X射线计算成像将待配准3D图像生成一幅DRR图像作为浮动图像，再将此浮动图像与术中2D参考图像一起输入神经网络从而输出术前待配准3D图像的粗配准变换参数
+5. 通过Adam参数优化进行单块椎骨精配准
+  - 利用 Grow Cut区域生长算法对术前待配准3D图像进行椎骨分割，使得分割的子图中仅包含一块椎骨得到多幅单块椎骨图
+  - 将粗配准变换参数作为每幅单块椎骨图的厨师配准参数，然后将单块椎骨经过初始配准参数的刚体变换后，通过X射线成像计算模型进行投影生成单块椎骨图的DRR图像作为浮动图像
+  - 计算单块椎骨的浮动图像与术中参考图像之间的Dice Loss：$Dice\quad Loss = 1-\frac{2|X\cap Y|}{|X|+|Y|}$，其中$|X|$表示浮动图像像素矩阵中所有元素之和，$|Y|$表示参考图像的像素矩阵中所有元素之和$|X\cap Y|$表示两个像素矩阵对应元素点乘之后求所有元素之和
+  - 判断Dice Loss是否小于阈值，若小于阈值则停止迭代，完成精配准，否则设置Adam参数优化算法目标函数为Dice Loss，参数向量设置为当前精配准参数然后进行迭代配准
+  - 判断是否所有单块椎骨图完成了精配准，将所有单块椎骨图根据精配准参数进行空间变幻，再按照分割前位置进行组合实现层级配准
+
+整个算法的流程如下图所示：
+![[配准流程.png]]
+<center><font color=silver>图3 配准流程图</font></center>

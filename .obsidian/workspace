@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ysyx.md",
+            "file": "文献/一种2D-3D影像配准算法/一种2D-3D影像配准算法.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ysyx.md",
+                "file": "文献/一种2D-3D影像配准算法/一种2D-3D影像配准算法.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ysyx.md"
+                "file": "文献/一种2D-3D影像配准算法/一种2D-3D影像配准算法.md"
               }
             }
           },
@@ -103,19 +103,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412
+    "width": 412,
+    "collapsed": true
   },
   "active": "a994f33585237b5e",
   "lastOpenFiles": [
+    "文献/一种2D-3D影像配准算法/一种2D-3D影像配准算法.md",
+    "医学图像配准综述.md",
+    "文献/基于深度学习网络的2D-3D脊椎CT层级配准方法/基于深度学习网络的2D-3D脊椎CT层级配准方法.md",
+    "MIP.md",
     "ysyx.md",
     "stm32实例.md",
-    "MIP.md",
     "综述.md",
     "游戏引擎.md",
     "运筹学.md",
-    "英语写作.md",
-    "医学图像识别、分割和解析.md",
-    "医学图像配准综述.md",
-    "通信基础.md"
+    "英语写作.md"
   ]
 }
