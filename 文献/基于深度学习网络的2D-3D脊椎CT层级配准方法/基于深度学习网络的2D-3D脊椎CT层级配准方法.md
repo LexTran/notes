@@ -33,31 +33,31 @@
 	\begin{aligned}
 	\begin{aligned}
 	\begin{pmatrix}
-	1\quad 0\quad 0\quad &x_{trans}\\
-	0\quad 1\quad 0\quad &y_{trans}\\
-	0\quad 0\quad 1\quad &z_{trans}\\
-	0\quad 0\quad 0\quad &1
+	1&0&0&x_{trans}\\
+	0&1&0&y_{trans}\\
+	0&0&1&z_{trans}\\
+	0&0&0&1
 	\end{pmatrix}_{T}
 	&\times
-	\begin{pmatrix*}[c]
-	1\qquad 0\qquad 0\qquad 0\\
-	0\quad \cos\Phi\quad \sin\Phi\quad 0\\
-	0\quad {-\sin\Phi}\quad \cos\Phi\quad 0\\
-	0\qquad 0\qquad 0\qquad 1
+	\begin{pmatrix*}
+	1&0&0&0\\
+	0&\cos\Phi&\sin\Phi&0\\
+	0&{-\sin\Phi}&\cos\Phi&0\\
+	0&0&0&1
 	\end{pmatrix*}_{P}\\
 	\times
-	\begin{pmatrix*}[c]
-	\cos\Theta\quad 0\quad \sin\Theta\quad 0\\
-	0\qquad 1\qquad 0\qquad 0\\
-	-\sin\Theta\quad 0\quad \cos\Theta\quad 0\\
-	0\qquad 0\qquad 0\qquad 1
+	\begin{pmatrix*}
+	\cos\Theta&0&\sin\Theta&0\\
+	0&1&0&0\\
+	-\sin\Theta&0&\cos\Theta&0\\
+	0&0&0&1
 	\end{pmatrix*}_{R}
 	&\times
-	\begin{pmatrix*}[c]
-	\cos\Omega\quad \sin\Omega\quad 0\quad 0\\
-	-\sin\Omega\quad \cos\Omega\quad 0\quad 0\\
-	0\qquad 0\qquad 1\qquad 0\\
-	0\qquad 0\qquad 0\qquad 1
+	\begin{pmatrix*}
+	\cos\Omega&\sin\Omega&0&0\\
+	-\sin\Omega&\cos\Omega&0&0\\
+	0&0&1&0\\
+	0&0&0&1
 	\end{pmatrix*}_{Y}
 	\end{aligned}
 	\end{aligned}
